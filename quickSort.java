@@ -5,7 +5,7 @@ import java.util.*;
 public class quickSort {
     public static void main(String[] args) {
         int[] array = { 37, 2, 6, 10, 4, 3, 14, 89, 77 };
-        quickSort(array, 0, array.length);
+        QuickSort(array, 0, array.length);
         System.out.println(Arrays.toString(array));
     }
 
@@ -15,7 +15,7 @@ public class quickSort {
         array[j] = temp;
     }
 
-    public static void quickSort(int[] array, int min, int max) {
+    public static void QuickSort(int[] array, int min, int max) {
         if ((max - min) > 0) { // only recursively call the method when there are still
                                // two elements left to sort
             int pivot = min;
@@ -40,8 +40,8 @@ public class quickSort {
             }
 
             // recursively call the method until all the halves are sorted
-            quickSort(array, 0, pivot);
-            quickSort(array, pivot + 1, max);
+            QuickSort(array, 0, pivot);
+            QuickSort(array, pivot + 1, max);
         }
     }
 }
